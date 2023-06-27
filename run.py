@@ -1,12 +1,6 @@
 from functions import *
 
 
-if "images" not in os.listdir():
-    os.mkdir("images")
-if "to_watermark" not in os.listdir():
-    os.mkdir("to_watermark")
-if "watermarked" not in os.listdir():
-    os.mkdir("watermarked")
 if api_key == "":
     raise ValueError("api_key is empty. Please insert your Pixabay api key in functions.py")
 
