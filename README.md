@@ -14,6 +14,3 @@ In folder "images" will be saved all pictures you create.
 
 ### to_watermark
 If you want to watermark pictures, move them in this folder. After running program, watermarked versions will be saved in folder "watermarked".
-
-## Future plans
-* Making GUI
