@@ -6,7 +6,7 @@ from CTkMessagebox import CTkMessagebox
 from PIL import Image, ImageDraw, ImageFont
 
 
-api_key = "37351917-cc1b7a15bf23519e5aebc090b" # insert you api key here
+api_key = "" # insert you api key here
 
 def get_random_image_url():
     url = f"https://pixabay.com/api/?key={api_key}&q=night&image_type=photo&min_width=1080&min_height=1080"
