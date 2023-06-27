@@ -1,5 +1,4 @@
 # quote-generator
-<<<<<<< HEAD
 A python program that generates random images with quotes on them using Quotable and Pixabay API.
 
 ## Set up
@@ -18,6 +17,3 @@ If you want to watermark pictures, move them in this folder. After running progr
 
 ## Future plans
 * Making GUI
-=======
-Coming soon...
->>>>>>> 6912d2ff65ae9fe39ace4dbdb03a6d58697bf855
