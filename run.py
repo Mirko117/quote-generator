@@ -11,7 +11,7 @@ if api_key == "":
     raise ValueError("api_key is empty. Please insert your Pixabay api key in functions.py")
 
 print("\nIf you want to generate random quote with background image type: 1")
-print("If you want to generate random quote without background image: 2")
+print("If you want to generate random quote without background image type: 2")
 print("If you want to watermark pictures type: 3")
 
 inp = int(input())

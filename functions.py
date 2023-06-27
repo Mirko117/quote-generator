@@ -9,6 +9,7 @@ api_key = "" # insert you api key here
 
 def get_random_image_url():
     url = f"https://pixabay.com/api/?key={api_key}&q=night&image_type=photo&min_width=1080&min_height=1080"
+    #in url you can modify q= to get images you want. Example: q=yellow+flowers
     response = requests.get(url)
     data = response.json()
     photos = data["hits"]
@@ -33,8 +34,8 @@ def save_image(image_url, quote_text, output_file, background:bool):
         image = Image.open(("bg.jpg"))
         image = image.convert("RGB")
 
-    f = ["CookbookNormalRegular-6YmjD", "ComicLemon-mLx6V", "CookbookBoldBold-ywv3M"]
-    l = [70, 40, 70]
+    f = ["CookbookNormalRegular-6YmjD", "ComicLemon-mLx6V", "CookbookBoldBold-ywv3M"] #fonts
+    l = [70, 40, 70] #sizes of fonts
     pick = random.randint(0, len(f)-1) #picking random font
 
     quote_font = ImageFont.truetype(f"fonts/{f[pick]}.ttf", l[pick])
@@ -110,11 +111,13 @@ def add_watermarks(input_image_path, output_image_path, watermark_text):
 
     print(f"Watermark added successfully.")
 
-def auto_watermark(watermark_text):
-    dirs = os.listdir("to_watermark")
+
+def auto_watermark(watermark_text):     #this will go through every picture that is in "to_watermark"
+    dirs = os.listdir("to_watermark")   #folder and it'll watermark it, and move it to "watermarked"
     for image_name in dirs:
         add_watermarks(f"to_watermark/{image_name}", f"watermarked/{image_name}", watermark_text)
         os.remove(f"to_watermark/{image_name}")
+
 
 def auto_generate(num, background:bool):
     image_url = ""
