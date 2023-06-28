@@ -28,10 +28,8 @@ def generate_without_background():
 def watermark_images():
     watermark_text = watermark_entry.get()
     if watermark_text:
-        folder_path = filedialog.askdirectory(title="Select Folder")
-        if folder_path:
-            auto_watermark(watermark_text, folder_path)
-            show_info("Watermarking Complete", "Images watermarked successfully!")
+        auto_watermark(watermark_text)
+        show_info("Watermarking Complete", "Images watermarked successfully!")
     else:
         show_error("Error", "Watermark text is empty.")
 
