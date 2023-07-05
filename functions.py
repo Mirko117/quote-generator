@@ -72,15 +72,19 @@ def add_quote(quote): #this will save quote to quotes.txt
 
 def check_for_quote(quote): # this will check if quote is in quotes.txt
     q = open("quotes.txt", "r")
-    if quote in q:
+    c = q.read()
+    if quote in c:
         return True
     return False
+
 
 def show_info(title:str, message:str):
     CTkMessagebox(title=title, message=message)
 
+
 def show_error(title:str, message:str):
     CTkMessagebox(title=title, message=message, icon="cancel")
+
 
 def add_watermarks(input_image_path, output_image_path, watermark_text):
     # Load the input image
